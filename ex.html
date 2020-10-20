@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    label {
+        font-size: 20px;
+        font-weight: bold;
+    }
+</style>
+<body>
+<form>
+    <label>Chuyển đổi từ feet sang meters</label>
+    <p>
+        Nhập đơn vị feet: <input type="number"
+                                 oninput="footToMetre(this.value)"
+                                 onchange="footToMetre(this.value)">
+    </p>
+    <p id="result"></p>
+    <br>
+
+    <label>Chuyển đổi từ meters sang feet</label>
+    <p>
+        Nhập đơn vị meter: <input type="number"
+                                  oninput="meterToFoot(this.value)"
+                                  onchange="meterToFoot(this.value)">
+    </p>
+    <p id="result2"></p>
+</form>
+
+<script>
+    function footToMetre(foot) {
+        foot = parseFloat(foot);
+        document.getElementById('result').innerHTML = 'Đơn vị đổi sang meter là: ' + foot * 0.305 + '(ft)';
+    }
+
+    function meterToFoot(meter) {
+        meter = parseFloat(meter);
+        document.getElementById('result2').innerHTML = 'Đơn vị đổi sang feet là: ' + 3.279 * meter + '(m)';
+    }
+</script>
+</body>
+
+</html>
